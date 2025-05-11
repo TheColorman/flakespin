@@ -14,9 +14,7 @@ pkgs: module: let
   inherit (result) config;
 in
   pkgs.writeShellApplication {
-    name = config.command;
-
-    inherit (config) runtimeInputs;
+    inherit (config) name runtimeInputs;
 
     # "Command appears to be unreachable" does not work for traps
     excludeShellChecks = ["SC2317"];

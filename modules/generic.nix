@@ -7,9 +7,12 @@
     inherit (pkgs.lib.options) mkOption;
     inherit (pkgs.lib.types) str lines strMatching listOf package;
   in {
-    command = mkOption {
+    name = mkOption {
       type = str;
-      description = "Name of the executable that will boot the VM";
+      description = ''
+        Name of the executable that will boot the VM and its configuration
+        files
+      '';
     };
 
     cleanupScripts = mkOption {
@@ -70,7 +73,7 @@
             Path to the VM disk image that will be created. Defaults to
             working directory
           '';
-          default = "./${config.command}.qcow2";
+          default = "./${config.name}.qcow2";
         };
       };
       memory = mkOption {

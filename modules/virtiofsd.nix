@@ -7,7 +7,7 @@
   inherit (lib.options) mkOption mkEnableOption;
   inherit (lib.types) int str;
   inherit (lib.modules) mkIf;
-  inherit (config) command;
+  inherit (config) name;
 
   cfg = config.virtiofsd;
 in {
@@ -18,7 +18,7 @@ in {
       description = ''
         Path to directory where metadata about virtiofsd will be stored.
       '';
-      default = "/tmp/virtiofsd-${command}";
+      default = "/tmp/virtiofsd-${name}";
     };
     sharedDir = mkOption {
       type = str;

@@ -1,5 +1,5 @@
 {
-  command = "ubu";
+  name = "ubu";
   virtiofsd = {
     enable = true;
     sharedDir = "\${HOME}";

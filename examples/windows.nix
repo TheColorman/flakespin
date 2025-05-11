@@ -1,5 +1,5 @@
 {
-  command = "win";
+  name = "win";
   base.disk.size = "150G";
   virtiofsd = {
     enable = true;

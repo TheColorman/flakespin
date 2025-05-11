@@ -7,7 +7,7 @@
   inherit (lib.options) mkOption mkEnableOption;
   inherit (lib.types) str int;
   inherit (lib.modules) mkIf;
-  inherit (config) command;
+  inherit (config) name;
 
   cfg = config.tpm;
 
@@ -21,7 +21,7 @@ in {
       description = ''
         Path the directory the swtpm service will store state in.
       '';
-      default = "/tmp/vm/${command}/tpm_state";
+      default = "/tmp/vm/${name}/tpm_state";
     };
     socketWaitTimeout = mkOption {
       type = int;

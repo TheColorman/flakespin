@@ -37,7 +37,7 @@ and `machine.nix`:
 
 ```nix
 {
-  command = "win";
+  name = "win";
   base.disk.size = "150G";
   virtiofsd = {
     enable = true;
@@ -58,7 +58,7 @@ lines:
 
 ```diff nix
 {
-  command = "win";
+  name = "win";
   base.disk.size = "150G";
   virtiofsd = {
     enable = true;
