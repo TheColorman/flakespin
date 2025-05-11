@@ -1,7 +1,10 @@
 {
-  mkVm = modulePath: {pkgs}: let
+  mkVm = {
+    modules,
+    pkgs,
+  }: let
     vm = import ../modules pkgs;
-    executable = vm (import modulePath);
+    executable = vm {imports = modules;};
   in
     executable;
 }

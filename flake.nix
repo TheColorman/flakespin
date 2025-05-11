@@ -14,7 +14,8 @@
       in {
         packages = forAllSystems (system: let
           mkVm = modulePath:
-            self.lib.mkVm modulePath {
+            self.lib.mkVm {
+              imports = [modulePath];
               pkgs = nixpkgs.legacyPackages.${system};
             };
         in {
