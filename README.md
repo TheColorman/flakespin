@@ -80,3 +80,11 @@ disk at `~/Downloads/Win11_24H2_EnglishInternational_x64.iso` as the
 installation disk, and finally add the disk at
 `~/Downloads/virtio-win-0.1.271.iso` which will mount the necessary virtio disk
 drivers that are required for installing Windows with QEMU.
+
+Once the installation has finished, `installation` can be removed and it will
+start booting regular disk.
+
+## Options
+
+Not documented at this time. See the [`modules/`](./modules) directory for a
+list of configuration options.
