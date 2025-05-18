@@ -32,7 +32,7 @@ in
       ${config.preStartup}
 
       echo "Starting QEMU VM..."
-      sudo --preserve-env=XDG_RUNTIME_DIR \
+      sudo -E \
         qemu-system-x86_64 ${config.qemuArgs}
 
       echo "QEMU process exited"
